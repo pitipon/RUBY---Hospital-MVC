@@ -33,7 +33,7 @@ class BaseRepository
 
     def load_csv
         csv_options = { headers: :first_row, header_converters: :symbol }
-        CSV.foreach(@csv_file, csv_option) do |row|
+        CSV.foreach(@csv_file, csv_options) do |row|
             @elements << serialize(row)
             @next_id += 1
         end
