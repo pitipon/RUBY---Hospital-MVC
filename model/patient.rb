@@ -8,10 +8,14 @@ class Patient
     end
 
     def deserialize
-        [@id, @name, @cured, @room.id]
+        [@id, @name, @cured]
     end
 
     def cure
         @cured = true
+    end
+
+    def self.headers
+        %w(id name cured)
     end
 end

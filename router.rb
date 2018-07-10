@@ -15,6 +15,7 @@ class Router
 
             case action
             when 1 then @patient_controller.list
+            when 2 then @patient_controller.add
             else
                 puts "Wrong number!"
             end
@@ -25,5 +26,6 @@ class Router
 
     def print_menu
         puts '1 lists all patients'
+        puts '2 add new patients'
     end
 end
