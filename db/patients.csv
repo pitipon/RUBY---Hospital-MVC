@@ -1,5 +1,6 @@
 id,name,cured
 1,mo,false
 2,mo2,false
-3,โท,true
-4,mo,fasle
+3,โท,false
+4,mo,false
+5,mew,true

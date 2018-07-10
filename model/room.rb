@@ -1,7 +1,9 @@
 class Room
     attr_accessor :id
+    attr_reader :capacity
 
     def initialize(attributes = {})
+        @id = attributes[:id]
         @capacity = attributes[:capacity] || 0
         @patients = attributes[:patients] || []
     end
@@ -18,5 +20,9 @@ class Room
         fail Exception, "Room is full!" if full?
         patient.room = self
         @patients.push(patient)
+    end
+
+    def self.headers
+        %w(id capacity)
     end
 end

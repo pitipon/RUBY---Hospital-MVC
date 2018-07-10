@@ -35,7 +35,6 @@ class BaseRepository
         csv_options = { headers: :first_row, header_converters: :symbol }
         CSV.foreach(@csv_file, csv_options) do |row|
             @elements << serialize(row)
-            puts @elements.inspect
             @next_id += 1
         end
     end
